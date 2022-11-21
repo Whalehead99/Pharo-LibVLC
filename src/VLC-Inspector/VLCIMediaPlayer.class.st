@@ -12,7 +12,7 @@ Class {
 VLCIMediaPlayer >> defaultLayout [
 
 	^ SpBoxLayout newVertical
-		  add: #progressBar;
+		  "add: #progressBar;"
 		  addLast: #actionBar
 		  expand: false
 		  fill: false
@@ -36,6 +36,6 @@ VLCIMediaPlayer >> initializePresenters [
 				action: [ self model pause ];
 				yourself);
 		yourself.
-	progressBar := self newProgressBar.
-	progressBar progress: [ self model position ] every: 0.5 second
+	"progressBar := self newProgressBar.
+	progressBar progress: [ self model position ] every: 0.5 second"
 ]

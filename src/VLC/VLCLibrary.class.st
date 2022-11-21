@@ -829,7 +829,7 @@ VLCLibrary >> mediaPlayer: aMediaPlayer setMedia: aVLCMedia [
 	self ensureExists: aMediaPlayer.
 	self ensureExists: aVLCMedia.
 	^ self ffiCall:
-		  'void libvlc_media_player_get_media (VLCMediaPlayer * aMediaPlayer, VLCMedia * aVLCMedia)'
+		  'void libvlc_media_player_set_media (VLCMediaPlayer * aMediaPlayer, VLCMedia * aVLCMedia)'
 ]
 
 { #category : #'media player' }
