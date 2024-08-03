@@ -21,17 +21,19 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCMediaDiscovererDescription,
-	#superclass : #FFIExternalStructure,
+	#name : 'VLCMediaDiscovererDescription',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_I_CAT',
 		'OFFSET_PSZ_LONGNAME',
 		'OFFSET_PSZ_NAME'
 	],
-	#category : #'VLC-Structure'
+	#category : 'VLC-Structure',
+	#package : 'VLC',
+	#tag : 'Structure'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLCMediaDiscovererDescription class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(String psz_name;
@@ -39,37 +41,37 @@ VLCMediaDiscovererDescription class >> fieldsDesc [
 	VLCMediaDiscovererCategory i_cat;)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCMediaDiscovererDescription >> i_cat [
 	"This method was automatically generated"
 	^VLCMediaDiscovererCategory fromInteger: (handle unsignedLongAt: OFFSET_I_CAT)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCMediaDiscovererDescription >> i_cat: anObject [
 	"This method was automatically generated"
 	handle unsignedLongAt: OFFSET_I_CAT put: anObject value
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCMediaDiscovererDescription >> psz_longname [
 	"This method was automatically generated"
 	^ExternalData fromHandle: (handle pointerAt: OFFSET_PSZ_LONGNAME) type: ExternalType char asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCMediaDiscovererDescription >> psz_longname: anObject [
 	"This method was automatically generated"
 	handle pointerAt: OFFSET_PSZ_LONGNAME put: anObject getHandle.
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCMediaDiscovererDescription >> psz_name [
 	"This method was automatically generated"
 	^ExternalData fromHandle: (handle pointerAt: OFFSET_PSZ_NAME) type: ExternalType char asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCMediaDiscovererDescription >> psz_name: anObject [
 	"This method was automatically generated"
 	handle pointerAt: OFFSET_PSZ_NAME put: anObject getHandle.

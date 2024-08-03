@@ -26,17 +26,19 @@ result := vlc
 result.
 "
 Class {
-	#name : #VLCEventCallback,
-	#superclass : #FFICallback,
-	#category : #'VLC-Callback'
+	#name : 'VLCEventCallback',
+	#superclass : 'FFICallback',
+	#category : 'VLC-Callback',
+	#package : 'VLC',
+	#tag : 'Callback'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 VLCEventCallback class >> fnSpec [
 	^ #(void (const VLCEvent_t * p_event, void *p_data))
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 VLCEventCallback class >> on: aBlock [
 	^ self signature: self fnSpec block: aBlock
 ]

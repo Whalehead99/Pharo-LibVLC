@@ -1,13 +1,15 @@
 Class {
-	#name : #'VLC_media_player_title_changed',
-	#superclass : #FFIExternalStructure,
+	#name : 'VLC_media_player_title_changed',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_NEW_TITLE'
 	],
-	#category : #'VLC-Events'
+	#category : 'VLC-Events',
+	#package : 'VLC',
+	#tag : 'Events'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLC_media_player_title_changed class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 
@@ -16,13 +18,13 @@ VLC_media_player_title_changed class >> fieldsDesc [
 	)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_title_changed >> new_title [
 	"This method was automatically generated"
 	^handle signedLongAt: OFFSET_NEW_TITLE
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_title_changed >> new_title: anObject [
 	"This method was automatically generated"
 	handle signedLongAt: OFFSET_NEW_TITLE put: anObject

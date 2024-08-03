@@ -21,8 +21,8 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCVideoColorPrimariesT,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'VLCVideoColorPrimariesT',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'libvlc_video_primaries_BT2020',
 		'libvlc_video_primaries_BT470_M',
@@ -31,10 +31,12 @@ Class {
 		'libvlc_video_primaries_BT709',
 		'libvlc_video_primaries_DCI_P3'
 	],
-	#category : #'VLC-Enumeration'
+	#category : 'VLC-Enumeration',
+	#package : 'VLC',
+	#tag : 'Enumeration'
 }
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 VLCVideoColorPrimariesT class >> enumDecl [
 	^ #(libvlc_video_primaries_BT601_525 1	
 libvlc_video_primaries_BT601_625 2
@@ -44,43 +46,43 @@ libvlc_video_primaries_DCI_P3 5
 libvlc_video_primaries_BT470_M 6)
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 VLCVideoColorPrimariesT class >> initialize [
 	"self rebuildEnumAccessors"
 	self initializeEnumeration
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoColorPrimariesT class >> libvlc_video_primaries_BT2020 [
 	"This method was automatically generated"
 	^ libvlc_video_primaries_BT2020
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoColorPrimariesT class >> libvlc_video_primaries_BT470_M [
 	"This method was automatically generated"
 	^ libvlc_video_primaries_BT470_M
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoColorPrimariesT class >> libvlc_video_primaries_BT601_525 [
 	"This method was automatically generated"
 	^ libvlc_video_primaries_BT601_525
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoColorPrimariesT class >> libvlc_video_primaries_BT601_625 [
 	"This method was automatically generated"
 	^ libvlc_video_primaries_BT601_625
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoColorPrimariesT class >> libvlc_video_primaries_BT709 [
 	"This method was automatically generated"
 	^ libvlc_video_primaries_BT709
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoColorPrimariesT class >> libvlc_video_primaries_DCI_P3 [
 	"This method was automatically generated"
 	^ libvlc_video_primaries_DCI_P3

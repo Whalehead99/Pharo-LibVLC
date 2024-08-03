@@ -21,18 +21,20 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCMediaDiscovererCategory,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'VLCMediaDiscovererCategory',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'libvlc_media_discoverer_devices',
 		'libvlc_media_discoverer_lan',
 		'libvlc_media_discoverer_localdirs',
 		'libvlc_media_discoverer_podcasts'
 	],
-	#category : #'VLC-Enumeration'
+	#category : 'VLC-Enumeration',
+	#package : 'VLC',
+	#tag : 'Enumeration'
 }
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 VLCMediaDiscovererCategory class >> enumDecl [
 	^ #(libvlc_media_discoverer_devices 1
 libvlc_media_discoverer_lan 2
@@ -40,47 +42,47 @@ libvlc_media_discoverer_podcasts 3
 libvlc_media_discoverer_localdirs 4)
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 VLCMediaDiscovererCategory class >> initialize [
 	self initializeEnumeration
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaDiscovererCategory class >> libvlc_media_discoverer_devices [
 	^ libvlc_media_discoverer_devices
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaDiscovererCategory class >> libvlc_media_discoverer_devices: anObject [
 	libvlc_media_discoverer_devices := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaDiscovererCategory class >> libvlc_media_discoverer_lan [
 	^ libvlc_media_discoverer_lan
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaDiscovererCategory class >> libvlc_media_discoverer_lan: anObject [
 	libvlc_media_discoverer_lan := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaDiscovererCategory class >> libvlc_media_discoverer_localdirs [
 	^ libvlc_media_discoverer_localdirs
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaDiscovererCategory class >> libvlc_media_discoverer_localdirs: anObject [
 	libvlc_media_discoverer_localdirs := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaDiscovererCategory class >> libvlc_media_discoverer_podcasts [
 	^ libvlc_media_discoverer_podcasts
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaDiscovererCategory class >> libvlc_media_discoverer_podcasts: anObject [
 	libvlc_media_discoverer_podcasts := anObject
 ]

@@ -21,17 +21,19 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCAudioOutput,
-	#superclass : #FFIExternalStructure,
+	#name : 'VLCAudioOutput',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_PSZ_DESCRIPTION',
 		'OFFSET_PSZ_NAME',
 		'OFFSET_P_NEXT'
 	],
-	#category : #'VLC-Structure'
+	#category : 'VLC-Structure',
+	#package : 'VLC',
+	#tag : 'Structure'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLCAudioOutput class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(String psz_name;
@@ -39,37 +41,37 @@ VLCAudioOutput class >> fieldsDesc [
 	VLCAudioOutput * p_next;)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCAudioOutput >> p_next [
 	"This method was automatically generated"
 	^VLCAudioOutput fromHandle: (handle pointerAt: OFFSET_P_NEXT)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCAudioOutput >> p_next: anObject [
 	"This method was automatically generated"
 	handle pointerAt: OFFSET_P_NEXT put: anObject getHandle.
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCAudioOutput >> psz_description [
 	"This method was automatically generated"
 	^ExternalData fromHandle: (handle pointerAt: OFFSET_PSZ_DESCRIPTION) type: ExternalType char asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCAudioOutput >> psz_description: anObject [
 	"This method was automatically generated"
 	handle pointerAt: OFFSET_PSZ_DESCRIPTION put: anObject getHandle.
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCAudioOutput >> psz_name [
 	"This method was automatically generated"
 	^ExternalData fromHandle: (handle pointerAt: OFFSET_PSZ_NAME) type: ExternalType char asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCAudioOutput >> psz_name: anObject [
 	"This method was automatically generated"
 	handle pointerAt: OFFSET_PSZ_NAME put: anObject getHandle.

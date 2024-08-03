@@ -1,10 +1,12 @@
 Class {
-	#name : #VLCExample,
-	#superclass : #Object,
-	#category : #'VLC-Example'
+	#name : 'VLCExample',
+	#superclass : 'Object',
+	#category : 'VLC-Example',
+	#package : 'VLC',
+	#tag : 'Example'
 }
 
-{ #category : #examples }
+{ #category : 'examples' }
 VLCExample class >> playAMusic [
 	<example>
 	| filePath vlc media mediaPlayer |
@@ -19,6 +21,6 @@ VLCExample class >> playAMusic [
 	^ mediaPlayer inspect
 ]
 
-{ #category : #'see class side' }
+{ #category : 'see class side' }
 VLCExample >> seeClassSide [
 ]

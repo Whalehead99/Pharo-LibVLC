@@ -21,17 +21,19 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCTitleDescription,
-	#superclass : #FFIExternalStructure,
+	#name : 'VLCTitleDescription',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_I_DURATION',
 		'OFFSET_I_FLAGS',
 		'OFFSET_PSZ_NAME'
 	],
-	#category : #'VLC-Structure'
+	#category : 'VLC-Structure',
+	#package : 'VLC',
+	#tag : 'Structure'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLCTitleDescription class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(int64 i_duration;
@@ -39,37 +41,37 @@ VLCTitleDescription class >> fieldsDesc [
 	int i_flags;)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTitleDescription >> i_duration [
 	"This method was automatically generated"
 	^handle signedLongLongAt: OFFSET_I_DURATION
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTitleDescription >> i_duration: anObject [
 	"This method was automatically generated"
 	handle signedLongLongAt: OFFSET_I_DURATION put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTitleDescription >> i_flags [
 	"This method was automatically generated"
 	^handle signedLongAt: OFFSET_I_FLAGS
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTitleDescription >> i_flags: anObject [
 	"This method was automatically generated"
 	handle signedLongAt: OFFSET_I_FLAGS put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTitleDescription >> psz_name [
 	"This method was automatically generated"
 	^ExternalData fromHandle: (handle pointerAt: OFFSET_PSZ_NAME) type: ExternalType char asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTitleDescription >> psz_name: anObject [
 	"This method was automatically generated"
 	handle pointerAt: OFFSET_PSZ_NAME put: anObject getHandle.

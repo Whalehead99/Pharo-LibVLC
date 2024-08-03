@@ -21,17 +21,19 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCTrackDescription,
-	#superclass : #FFIExternalStructure,
+	#name : 'VLCTrackDescription',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_I_ID',
 		'OFFSET_PSZ_NAME',
 		'OFFSET_P_NEXT'
 	],
-	#category : #'VLC-Structure'
+	#category : 'VLC-Structure',
+	#package : 'VLC',
+	#tag : 'Structure'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLCTrackDescription class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(int i_id;
@@ -39,31 +41,31 @@ VLCTrackDescription class >> fieldsDesc [
 	VLCTrackDescription * p_next;)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTrackDescription >> i_id [
 	"This method was automatically generated"
 	^handle signedLongAt: OFFSET_I_ID
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTrackDescription >> i_id: anObject [
 	"This method was automatically generated"
 	handle signedLongAt: OFFSET_I_ID put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTrackDescription >> p_next [
 	"This method was automatically generated"
 	^VLCTrackDescription fromHandle: (handle pointerAt: OFFSET_P_NEXT)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTrackDescription >> p_next: anObject [
 	"This method was automatically generated"
 	handle pointerAt: OFFSET_P_NEXT put: anObject getHandle.
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTrackDescription >> printOn: aStream [
 	handle isNull
 		ifFalse: [ aStream
@@ -74,19 +76,19 @@ VLCTrackDescription >> printOn: aStream [
 		ifTrue: [ aStream << 'nil' ]
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTrackDescription >> psz_name [
 	"This method was automatically generated"
 	^ExternalData fromHandle: (handle pointerAt: OFFSET_PSZ_NAME) type: ExternalType char asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCTrackDescription >> psz_name: anObject [
 	"This method was automatically generated"
 	handle pointerAt: OFFSET_PSZ_NAME put: anObject getHandle.
 ]
 
-{ #category : #'inspector extensions' }
+{ #category : 'inspector extensions' }
 VLCTrackDescription >> vlcExtensionTrackDescription: composite [
 	<gtInspectorPresentationOrder: 0>
 	composite list

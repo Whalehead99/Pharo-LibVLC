@@ -21,55 +21,57 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCVideoColorSpaceT,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'VLCVideoColorSpaceT',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'libvlc_video_colorspace_BT2020',
 		'libvlc_video_colorspace_BT601',
 		'libvlc_video_colorspace_BT709'
 	],
-	#category : #'VLC-Enumeration'
+	#category : 'VLC-Enumeration',
+	#package : 'VLC',
+	#tag : 'Enumeration'
 }
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 VLCVideoColorSpaceT class >> enumDecl [
 	^ #(libvlc_video_colorspace_BT601 1
 libvlc_video_colorspace_BT709 2
 libvlc_video_colorspace_BT2020 3)
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 VLCVideoColorSpaceT class >> initialize [
 	"self rebuildEnumAccessors"
 	self initializeEnumeration
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCVideoColorSpaceT class >> libvlc_video_colorspace_BT2020 [
 	^ libvlc_video_colorspace_BT2020
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCVideoColorSpaceT class >> libvlc_video_colorspace_BT2020: anObject [
 	libvlc_video_colorspace_BT2020 := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCVideoColorSpaceT class >> libvlc_video_colorspace_BT601 [
 	^ libvlc_video_colorspace_BT601
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCVideoColorSpaceT class >> libvlc_video_colorspace_BT601: anObject [
 	libvlc_video_colorspace_BT601 := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCVideoColorSpaceT class >> libvlc_video_colorspace_BT709 [
 	^ libvlc_video_colorspace_BT709
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCVideoColorSpaceT class >> libvlc_video_colorspace_BT709: anObject [
 	libvlc_video_colorspace_BT709 := anObject
 ]

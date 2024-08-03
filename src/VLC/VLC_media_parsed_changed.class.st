@@ -1,13 +1,15 @@
 Class {
-	#name : #'VLC_media_parsed_changed',
-	#superclass : #FFIExternalStructure,
+	#name : 'VLC_media_parsed_changed',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_NEW_STATUS'
 	],
-	#category : #'VLC-Events'
+	#category : 'VLC-Events',
+	#package : 'VLC',
+	#tag : 'Events'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLC_media_parsed_changed class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
@@ -15,13 +17,13 @@ VLC_media_parsed_changed class >> fieldsDesc [
 	)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_parsed_changed >> new_status [
 	"This method was automatically generated"
 	^handle signedLongAt: OFFSET_NEW_STATUS
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_parsed_changed >> new_status: anObject [
 	"This method was automatically generated"
 	handle signedLongAt: OFFSET_NEW_STATUS put: anObject

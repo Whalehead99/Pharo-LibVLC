@@ -1,13 +1,15 @@
 Class {
-	#name : #'VLC_media_player_length_changed',
-	#superclass : #FFIExternalStructure,
+	#name : 'VLC_media_player_length_changed',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_NEW_LENGTH'
 	],
-	#category : #'VLC-Events'
+	#category : 'VLC-Events',
+	#package : 'VLC',
+	#tag : 'Events'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLC_media_player_length_changed class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
@@ -15,13 +17,13 @@ VLC_media_player_length_changed class >> fieldsDesc [
 	)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_length_changed >> new_length [
 	"This method was automatically generated"
 	^handle signedLongLongAt: OFFSET_NEW_LENGTH
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_length_changed >> new_length: anObject [
 	"This method was automatically generated"
 	handle signedLongLongAt: OFFSET_NEW_LENGTH put: anObject

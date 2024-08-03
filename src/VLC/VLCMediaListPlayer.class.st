@@ -1,29 +1,31 @@
 Class {
-	#name : #VLCMediaListPlayer,
-	#superclass : #FFIOpaqueObject,
+	#name : 'VLCMediaListPlayer',
+	#superclass : 'FFIOpaqueObject',
 	#instVars : [
 		'mediaList'
 	],
-	#category : #'VLC-Structure'
+	#category : 'VLC-Structure',
+	#package : 'VLC',
+	#tag : 'Structure'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaListPlayer >> eventManager [
 	VLCLibrary uniqueInstance mediaListPlayerEventManager: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaListPlayer >> isPlaying [
 	^ VLCLibrary uniqueInstance mediaListPlayerIsPlaying: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaListPlayer >> mediaList [
 
 	^ mediaList
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaListPlayer >> mediaList: aMediaList [
 
 	mediaList := aMediaList.
@@ -32,77 +34,77 @@ VLCMediaListPlayer >> mediaList: aMediaList [
 		setMediaList: aMediaList
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaListPlayer >> mediaPlayer [
 	^ VLCLibrary uniqueInstance mediaListPlayerGetMediaPlayer: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaListPlayer >> mediaPlayer: aVLCMediaPlayer [
 	VLCLibrary uniqueInstance mediaListPlayer: self setMediaPlayer: aVLCMediaPlayer
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 VLCMediaListPlayer >> next [
 	VLCLibrary uniqueInstance mediaListPlayerNext: self
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 VLCMediaListPlayer >> pause [
 	VLCLibrary uniqueInstance mediaListPlayerPause: self
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 VLCMediaListPlayer >> pause: anInteger [
 	VLCLibrary uniqueInstance mediaListPlayer: self setPause: anInteger
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 VLCMediaListPlayer >> play [
 	VLCLibrary uniqueInstance mediaListPlayerPlay: self
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 VLCMediaListPlayer >> playItem: aVLCMedia [
 	VLCLibrary uniqueInstance mediaListPlayer: self playItem: aVLCMedia
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 VLCMediaListPlayer >> playItemAtIndex: anIndex [
 	VLCLibrary uniqueInstance mediaListPlayer: self playItemAtIndex: anIndex
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaListPlayer >> playbackMode: aVLCPlaybackMode [
 	VLCLibrary uniqueInstance mediaListPlayer: self setPlaybackMode: aVLCPlaybackMode
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 VLCMediaListPlayer >> previous [
 	VLCLibrary uniqueInstance mediaListPlayerPrevious: self
 ]
 
-{ #category : #meta }
+{ #category : 'meta' }
 VLCMediaListPlayer >> retain [
 	VLCLibrary uniqueInstance mediaListPlayerRetain: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaListPlayer >> state [
 	VLCLibrary uniqueInstance mediaListPlayerGetState: self
 ]
 
-{ #category : #api }
+{ #category : 'api' }
 VLCMediaListPlayer >> stop [
 	VLCLibrary uniqueInstance mediaListPlayerStop: self
 ]
 
-{ #category : #'api - deprecated' }
+{ #category : 'api - deprecated' }
 VLCMediaListPlayer >> stopAsync [
 	self stop
 ]
 
-{ #category : #meta }
+{ #category : 'meta' }
 VLCMediaListPlayer >> vlcRelease [
 	"should be release but we don't want to override"
 	VLCLibrary uniqueInstance mediaListPlayerRelease: self

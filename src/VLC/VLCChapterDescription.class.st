@@ -21,17 +21,19 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCChapterDescription,
-	#superclass : #FFIExternalStructure,
+	#name : 'VLCChapterDescription',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_I_DURATION',
 		'OFFSET_I_TIME_OFFSET',
 		'OFFSET_PSZ_NAME'
 	],
-	#category : #'VLC-Structure'
+	#category : 'VLC-Structure',
+	#package : 'VLC',
+	#tag : 'Structure'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLCChapterDescription class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(int64 i_time_offset;
@@ -39,37 +41,37 @@ VLCChapterDescription class >> fieldsDesc [
 	String psz_name;)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCChapterDescription >> i_duration [
 	"This method was automatically generated"
 	^handle signedLongLongAt: OFFSET_I_DURATION
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCChapterDescription >> i_duration: anObject [
 	"This method was automatically generated"
 	handle signedLongLongAt: OFFSET_I_DURATION put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCChapterDescription >> i_time_offset [
 	"This method was automatically generated"
 	^handle signedLongLongAt: OFFSET_I_TIME_OFFSET
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCChapterDescription >> i_time_offset: anObject [
 	"This method was automatically generated"
 	handle signedLongLongAt: OFFSET_I_TIME_OFFSET put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCChapterDescription >> psz_name [
 	"This method was automatically generated"
 	^ExternalData fromHandle: (handle pointerAt: OFFSET_PSZ_NAME) type: ExternalType char asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCChapterDescription >> psz_name: anObject [
 	"This method was automatically generated"
 	handle pointerAt: OFFSET_PSZ_NAME put: anObject getHandle.

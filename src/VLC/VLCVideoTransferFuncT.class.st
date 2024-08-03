@@ -21,8 +21,8 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCVideoTransferFuncT,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'VLCVideoTransferFuncT',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'libvlc_video_transfer_func_BT470_BG',
 		'libvlc_video_transfer_func_BT470_M',
@@ -33,10 +33,12 @@ Class {
 		'libvlc_video_transfer_func_SMPTE_240',
 		'libvlc_video_transfer_func_SRGB'
 	],
-	#category : #'VLC-Enumeration'
+	#category : 'VLC-Enumeration',
+	#package : 'VLC',
+	#tag : 'Enumeration'
 }
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 VLCVideoTransferFuncT class >> enumDecl [
 	^ #(libvlc_video_transfer_func_LINEAR 1
 libvlc_video_transfer_func_SRGB 2
@@ -48,55 +50,55 @@ libvlc_video_transfer_func_SMPTE_240 7
 libvlc_video_transfer_func_HLG 8)
 ]
 
-{ #category : #'enum declaration' }
+{ #category : 'enum declaration' }
 VLCVideoTransferFuncT class >> initialize [
 	"self rebuildEnumAccessors"
 	self initializeEnumeration
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoTransferFuncT class >> libvlc_video_transfer_func_BT470_BG [
 	"This method was automatically generated"
 	^ libvlc_video_transfer_func_BT470_BG
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoTransferFuncT class >> libvlc_video_transfer_func_BT470_M [
 	"This method was automatically generated"
 	^ libvlc_video_transfer_func_BT470_M
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoTransferFuncT class >> libvlc_video_transfer_func_BT709 [
 	"This method was automatically generated"
 	^ libvlc_video_transfer_func_BT709
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoTransferFuncT class >> libvlc_video_transfer_func_HLG [
 	"This method was automatically generated"
 	^ libvlc_video_transfer_func_HLG
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoTransferFuncT class >> libvlc_video_transfer_func_LINEAR [
 	"This method was automatically generated"
 	^ libvlc_video_transfer_func_LINEAR
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoTransferFuncT class >> libvlc_video_transfer_func_PQ [
 	"This method was automatically generated"
 	^ libvlc_video_transfer_func_PQ
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoTransferFuncT class >> libvlc_video_transfer_func_SMPTE_240 [
 	"This method was automatically generated"
 	^ libvlc_video_transfer_func_SMPTE_240
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCVideoTransferFuncT class >> libvlc_video_transfer_func_SRGB [
 	"This method was automatically generated"
 	^ libvlc_video_transfer_func_SRGB

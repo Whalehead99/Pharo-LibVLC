@@ -1,38 +1,40 @@
 Class {
-	#name : #VLCPlaybackMode,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'VLCPlaybackMode',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'libvlc_playback_mode_default',
 		'libvlc_playback_mode_loop',
 		'libvlc_playback_mode_repeat'
 	],
-	#category : #'VLC-Enumeration'
+	#category : 'VLC-Enumeration',
+	#package : 'VLC',
+	#tag : 'Enumeration'
 }
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 VLCPlaybackMode class >> enumDecl [
 	^ #(libvlc_playback_mode_default 1
 libvlc_playback_mode_loop 2
 libvlc_playback_mode_repeat 3)
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 VLCPlaybackMode class >> initialize [
 	"self rebuildEnumAccessors"
 	self initializeEnumeration
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCPlaybackMode class >> libvlc_playback_mode_default [
 	^ libvlc_playback_mode_default
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCPlaybackMode class >> libvlc_playback_mode_loop [
 	^ libvlc_playback_mode_loop
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCPlaybackMode class >> libvlc_playback_mode_repeat [
 	^ libvlc_playback_mode_repeat
 ]

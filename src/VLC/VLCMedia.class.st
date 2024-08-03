@@ -1,25 +1,27 @@
 Class {
-	#name : #VLCMedia,
-	#superclass : #FFIOpaqueObject,
-	#category : #'VLC-Structure'
+	#name : 'VLCMedia',
+	#superclass : 'FFIOpaqueObject',
+	#category : 'VLC-Structure',
+	#package : 'VLC',
+	#tag : 'Structure'
 }
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> album [
 	^ VLCLibrary uniqueInstance media: self getMeta: VLCMetaT libvlc_meta_Album
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> artist [
 	^ VLCLibrary uniqueInstance media: self getMeta: VLCMetaT libvlc_meta_Artist
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> duration [
 	^ VLCLibrary uniqueInstance mediaGetDuration: self
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> getSlaves [
 	| arr nb a |
 	arr := ExternalAddress allocate: ExternalAddress wordSize.
@@ -31,47 +33,47 @@ VLCMedia >> getSlaves [
 	^ a
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> mrl [
 	^ VLCLibrary uniqueInstance mediaGetMRL: self
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> parseLocal [
 	^ VLCLibrary uniqueInstance media: self parseWithOptions: VLCMediaParseFlag libvlc_media_parse_local timeout: 0.
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> parseStatus [
 	^ VLCLibrary uniqueInstance mediaGetParsedStatus: self
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> parseWithOption: aVLCMediaParseFlag timeout: aTimeOut [
 	^ VLCLibrary uniqueInstance media: self parseWithOptions: aVLCMediaParseFlag timeout: aTimeOut.
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> saveMeta [
 	^ VLCLibrary uniqueInstance mediaSaveMeta: self
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> setMeta: aVLCMeta with: newMetaValue [
 	^ VLCLibrary uniqueInstance media: self setMeta: aVLCMeta with: newMetaValue
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> title [
 	^ VLCLibrary uniqueInstance media: self getMeta: VLCMetaT libvlc_meta_Title
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> trackNumber [
 	^ VLCLibrary uniqueInstance media: self getMeta: VLCMetaT libvlc_meta_TrackNumber
 ]
 
-{ #category : #acccessing }
+{ #category : 'acccessing' }
 VLCMedia >> vlcRelease [
 	^ VLCLibrary uniqueInstance mediaRelease: self
 ]

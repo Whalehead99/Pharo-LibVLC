@@ -1,13 +1,15 @@
 Class {
-	#name : #'VLC_media_player_audio_volume',
-	#superclass : #FFIExternalStructure,
+	#name : 'VLC_media_player_audio_volume',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_VOLUME'
 	],
-	#category : #'VLC-Events'
+	#category : 'VLC-Events',
+	#package : 'VLC',
+	#tag : 'Events'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLC_media_player_audio_volume class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
@@ -15,13 +17,13 @@ VLC_media_player_audio_volume class >> fieldsDesc [
 	)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_audio_volume >> volume [
 	"This method was automatically generated"
 	^handle floatAt: OFFSET_VOLUME
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_audio_volume >> volume: anObject [
 	"This method was automatically generated"
 	handle floatAt: OFFSET_VOLUME put: anObject

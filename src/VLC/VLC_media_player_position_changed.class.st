@@ -1,13 +1,15 @@
 Class {
-	#name : #'VLC_media_player_position_changed',
-	#superclass : #FFIExternalStructure,
+	#name : 'VLC_media_player_position_changed',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_NEW_POSITION'
 	],
-	#category : #'VLC-Events'
+	#category : 'VLC-Events',
+	#package : 'VLC',
+	#tag : 'Events'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLC_media_player_position_changed class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
@@ -15,13 +17,13 @@ VLC_media_player_position_changed class >> fieldsDesc [
 	)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_position_changed >> new_position [
 	"This method was automatically generated"
 	^handle floatAt: OFFSET_NEW_POSITION
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_position_changed >> new_position: anObject [
 	"This method was automatically generated"
 	handle floatAt: OFFSET_NEW_POSITION put: anObject

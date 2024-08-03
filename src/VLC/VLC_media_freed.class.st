@@ -1,13 +1,15 @@
 Class {
-	#name : #'VLC_media_freed',
-	#superclass : #FFIExternalStructure,
+	#name : 'VLC_media_freed',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_MD'
 	],
-	#category : #'VLC-Events'
+	#category : 'VLC-Events',
+	#package : 'VLC',
+	#tag : 'Events'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLC_media_freed class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	" struct {
@@ -19,13 +21,13 @@ VLC_media_freed class >> fieldsDesc [
 	)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_freed >> md [
 	"This method was automatically generated"
 	^ExternalData fromHandle: (handle pointerAt: OFFSET_MD) type: ExternalType void asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_freed >> md: anObject [
 	"This method was automatically generated"
 	handle pointerAt: OFFSET_MD put: anObject getHandle.

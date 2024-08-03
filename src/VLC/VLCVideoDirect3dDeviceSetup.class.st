@@ -21,41 +21,43 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCVideoDirect3dDeviceSetup,
-	#superclass : #FFIExternalStructure,
+	#name : 'VLCVideoDirect3dDeviceSetup',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_ADAPTER',
 		'OFFSET_DEVICE_CONTEXT'
 	],
-	#category : #'VLC-Structure'
+	#category : 'VLC-Structure',
+	#package : 'VLC',
+	#tag : 'Structure'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLCVideoDirect3dDeviceSetup class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(void * device_context;
 	int adapter;)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoDirect3dDeviceSetup >> adapter [
 	"This method was automatically generated"
 	^handle signedLongAt: OFFSET_ADAPTER
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoDirect3dDeviceSetup >> adapter: anObject [
 	"This method was automatically generated"
 	handle signedLongAt: OFFSET_ADAPTER put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoDirect3dDeviceSetup >> device_context [
 	"This method was automatically generated"
 	^ExternalData fromHandle: (handle pointerAt: OFFSET_DEVICE_CONTEXT) type: ExternalType void asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoDirect3dDeviceSetup >> device_context: anObject [
 	"This method was automatically generated"
 	handle pointerAt: OFFSET_DEVICE_CONTEXT put: anObject getHandle.

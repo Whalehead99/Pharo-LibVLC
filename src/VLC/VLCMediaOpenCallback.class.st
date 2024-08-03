@@ -26,17 +26,19 @@ result := vlc
 result.
 "
 Class {
-	#name : #VLCMediaOpenCallback,
-	#superclass : #FFICallback,
-	#category : #'VLC-Callback'
+	#name : 'VLCMediaOpenCallback',
+	#superclass : 'FFICallback',
+	#category : 'VLC-Callback',
+	#package : 'VLC',
+	#tag : 'Callback'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 VLCMediaOpenCallback class >> fnSpec [
 	^ #(int #(void * opaque , void ** datap , int64 * sizep))
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 VLCMediaOpenCallback class >> on: aBlock [
 	^ self signature: self fnSpec block: aBlock
 ]

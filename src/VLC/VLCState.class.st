@@ -21,8 +21,8 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCState,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'VLCState',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'libvlc_Buffering',
 		'libvlc_Ended',
@@ -33,10 +33,12 @@ Class {
 		'libvlc_Playing',
 		'libvlc_Stopped'
 	],
-	#category : #'VLC-Enumeration'
+	#category : 'VLC-Enumeration',
+	#package : 'VLC',
+	#tag : 'Enumeration'
 }
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 VLCState class >> enumDecl [
 	^ #(libvlc_NothingSpecial 0 	
 libvlc_Opening 	1
@@ -48,48 +50,48 @@ libvlc_Ended 6
 libvlc_Error 7)
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 VLCState class >> initialize [
 	"self rebuildEnumAccessors"
 	self initializeEnumeration
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCState class >> libvlc_Buffering [
 	^ libvlc_Buffering
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCState class >> libvlc_Ended [
 	^ libvlc_Ended
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCState class >> libvlc_Error [
 	^ libvlc_Error
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCState class >> libvlc_NothingSpecial [
 	^ libvlc_NothingSpecial
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCState class >> libvlc_Opening [
 	^ libvlc_Opening
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCState class >> libvlc_Paused [
 	^ libvlc_Paused
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCState class >> libvlc_Playing [
 	^ libvlc_Playing
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCState class >> libvlc_Stopped [
 	^ libvlc_Stopped
 ]

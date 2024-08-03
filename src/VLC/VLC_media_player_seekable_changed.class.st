@@ -1,13 +1,15 @@
 Class {
-	#name : #'VLC_media_player_seekable_changed',
-	#superclass : #FFIExternalStructure,
+	#name : 'VLC_media_player_seekable_changed',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_NEW_SEEKABLE'
 	],
-	#category : #'VLC-Events'
+	#category : 'VLC-Events',
+	#package : 'VLC',
+	#tag : 'Events'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLC_media_player_seekable_changed class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
@@ -15,13 +17,13 @@ VLC_media_player_seekable_changed class >> fieldsDesc [
 	)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_seekable_changed >> new_seekable [
 	"This method was automatically generated"
 	^handle signedLongAt: OFFSET_NEW_SEEKABLE
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_seekable_changed >> new_seekable: anObject [
 	"This method was automatically generated"
 	handle signedLongAt: OFFSET_NEW_SEEKABLE put: anObject

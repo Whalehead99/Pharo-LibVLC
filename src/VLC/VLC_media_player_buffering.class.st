@@ -1,13 +1,15 @@
 Class {
-	#name : #'VLC_media_player_buffering',
-	#superclass : #FFIExternalStructure,
+	#name : 'VLC_media_player_buffering',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_NEW_CACHE'
 	],
-	#category : #'VLC-Events'
+	#category : 'VLC-Events',
+	#package : 'VLC',
+	#tag : 'Events'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLC_media_player_buffering class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
@@ -15,13 +17,13 @@ VLC_media_player_buffering class >> fieldsDesc [
 	)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_buffering >> new_cache [
 	"This method was automatically generated"
 	^handle floatAt: OFFSET_NEW_CACHE
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_player_buffering >> new_cache: anObject [
 	"This method was automatically generated"
 	handle floatAt: OFFSET_NEW_CACHE put: anObject

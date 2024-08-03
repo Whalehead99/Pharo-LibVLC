@@ -21,27 +21,29 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCVideoDirect3dDevice,
-	#superclass : #FFIExternalStructure,
+	#name : 'VLCVideoDirect3dDevice',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_HARDWARE_DECODING'
 	],
-	#category : #'VLC-Structure'
+	#category : 'VLC-Structure',
+	#package : 'VLC',
+	#tag : 'Structure'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLCVideoDirect3dDevice class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(bool hardware_decoding;)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoDirect3dDevice >> hardware_decoding [
 	"This method was automatically generated"
 	^handle booleanAt: OFFSET_HARDWARE_DECODING
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoDirect3dDevice >> hardware_decoding: anObject [
 	"This method was automatically generated"
 	handle booleanAt: OFFSET_HARDWARE_DECODING put: anObject

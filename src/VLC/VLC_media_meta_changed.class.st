@@ -1,13 +1,15 @@
 Class {
-	#name : #'VLC_media_meta_changed',
-	#superclass : #FFIExternalStructure,
+	#name : 'VLC_media_meta_changed',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_META_TYPE'
 	],
-	#category : #'VLC-Events'
+	#category : 'VLC-Events',
+	#package : 'VLC',
+	#tag : 'Events'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLC_media_meta_changed class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(
@@ -15,13 +17,13 @@ VLC_media_meta_changed class >> fieldsDesc [
 	)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_meta_changed >> meta_type [
 	"This method was automatically generated"
 	^VLCMetaT fromInteger: (handle unsignedLongAt: OFFSET_META_TYPE)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLC_media_meta_changed >> meta_type: anObject [
 	"This method was automatically generated"
 	handle unsignedLongAt: OFFSET_META_TYPE put: anObject value

@@ -21,8 +21,8 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCVideoOutputCfg,
-	#superclass : #FFIExternalStructure,
+	#name : 'VLCVideoOutputCfg',
+	#superclass : 'FFIExternalStructure',
 	#classVars : [
 		'OFFSET_COLORSPACE',
 		'OFFSET_FULL_RANGE',
@@ -30,10 +30,12 @@ Class {
 		'OFFSET_SURFACE_FORMAT',
 		'OFFSET_TRANSFER'
 	],
-	#category : #'VLC-Structure'
+	#category : 'VLC-Structure',
+	#package : 'VLC',
+	#tag : 'Structure'
 }
 
-{ #category : #'field definition' }
+{ #category : 'field definition' }
 VLCVideoOutputCfg class >> fieldsDesc [
 	"self rebuildFieldAccessors"
 	^ #(int surface_format;
@@ -43,61 +45,61 @@ VLCVideoOutputCfg class >> fieldsDesc [
 	VLCVideoTransferFuncT transfer;)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoOutputCfg >> colorspace [
 	"This method was automatically generated"
 	^VLCVideoColorSpaceT fromInteger: (handle unsignedLongAt: OFFSET_COLORSPACE)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoOutputCfg >> colorspace: anObject [
 	"This method was automatically generated"
 	handle unsignedLongAt: OFFSET_COLORSPACE put: anObject value
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoOutputCfg >> full_range [
 	"This method was automatically generated"
 	^handle booleanAt: OFFSET_FULL_RANGE
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoOutputCfg >> full_range: anObject [
 	"This method was automatically generated"
 	handle booleanAt: OFFSET_FULL_RANGE put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoOutputCfg >> primaries [
 	"This method was automatically generated"
 	^VLCVideoColorPrimariesT fromInteger: (handle unsignedLongAt: OFFSET_PRIMARIES)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoOutputCfg >> primaries: anObject [
 	"This method was automatically generated"
 	handle unsignedLongAt: OFFSET_PRIMARIES put: anObject value
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoOutputCfg >> surface_format [
 	"This method was automatically generated"
 	^handle signedLongAt: OFFSET_SURFACE_FORMAT
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoOutputCfg >> surface_format: anObject [
 	"This method was automatically generated"
 	handle signedLongAt: OFFSET_SURFACE_FORMAT put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoOutputCfg >> transfer [
 	"This method was automatically generated"
 	^VLCVideoTransferFuncT fromInteger: (handle unsignedLongAt: OFFSET_TRANSFER)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : 'accessing structure variables' }
 VLCVideoOutputCfg >> transfer: anObject [
 	"This method was automatically generated"
 	handle unsignedLongAt: OFFSET_TRANSFER put: anObject value

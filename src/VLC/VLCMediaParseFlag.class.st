@@ -1,6 +1,6 @@
 Class {
-	#name : #VLCMediaParseFlag,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'VLCMediaParseFlag',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'libvlc_media_do_interact',
 		'libvlc_media_fetch_local',
@@ -8,10 +8,12 @@ Class {
 		'libvlc_media_parse_local',
 		'libvlc_media_parse_network'
 	],
-	#category : #'VLC-Enumeration'
+	#category : 'VLC-Enumeration',
+	#package : 'VLC',
+	#tag : 'Enumeration'
 }
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 VLCMediaParseFlag class >> enumDecl [
 	^ #(libvlc_media_parse_local 0
 libvlc_media_parse_network 1
@@ -20,57 +22,57 @@ libvlc_media_fetch_network 4
 libvlc_media_do_interact 8)
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 VLCMediaParseFlag class >> initialize [
 	self initializeEnumeration
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaParseFlag class >> libvlc_media_do_interact [
 	^ libvlc_media_do_interact
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaParseFlag class >> libvlc_media_do_interact: anObject [
 	libvlc_media_do_interact := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaParseFlag class >> libvlc_media_fetch_local [
 	^ libvlc_media_fetch_local
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaParseFlag class >> libvlc_media_fetch_local: anObject [
 	libvlc_media_fetch_local := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaParseFlag class >> libvlc_media_fetch_network [
 	^ libvlc_media_fetch_network
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaParseFlag class >> libvlc_media_fetch_network: anObject [
 	libvlc_media_fetch_network := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaParseFlag class >> libvlc_media_parse_local [
 	^ libvlc_media_parse_local
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaParseFlag class >> libvlc_media_parse_local: anObject [
 	libvlc_media_parse_local := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaParseFlag class >> libvlc_media_parse_network [
 	^ libvlc_media_parse_network
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 VLCMediaParseFlag class >> libvlc_media_parse_network: anObject [
 	libvlc_media_parse_network := anObject
 ]

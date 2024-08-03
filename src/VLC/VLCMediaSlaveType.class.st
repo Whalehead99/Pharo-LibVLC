@@ -21,34 +21,36 @@ Internal Representation and Key Implementation Points.
     Implementation Points
 "
 Class {
-	#name : #VLCMediaSlaveType,
-	#superclass : #FFIExternalEnumeration,
+	#name : 'VLCMediaSlaveType',
+	#superclass : 'FFIExternalEnumeration',
 	#classVars : [
 		'libvlc_media_slave_type_audio',
 		'libvlc_media_slave_type_subtitle'
 	],
-	#category : #'VLC-Enumeration'
+	#category : 'VLC-Enumeration',
+	#package : 'VLC',
+	#tag : 'Enumeration'
 }
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 VLCMediaSlaveType class >> enumDecl [
 	^ #(libvlc_media_slave_type_subtitle 0
 	libvlc_media_slave_type_audio 1)
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 VLCMediaSlaveType class >> initialize [
 	"self rebuildEnumAccessors"
 	self initializeEnumeration
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCMediaSlaveType class >> libvlc_media_slave_type_audio [
 	"This method was automatically generated"
 	^ libvlc_media_slave_type_audio
 ]
 
-{ #category : #'accessing enum' }
+{ #category : 'accessing enum' }
 VLCMediaSlaveType class >> libvlc_media_slave_type_subtitle [
 	"This method was automatically generated"
 	^ libvlc_media_slave_type_subtitle
