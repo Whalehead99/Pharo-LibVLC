@@ -29,7 +29,7 @@ BaselineOfVLC >> defineDependencies: spec [
 { #category : 'baselines' }
 BaselineOfVLC >> defineGroups: spec [
 	spec
-		group: 'default' with: #('VLC' 'VLC-Tests' 'VLC-Inspector')
+		group: 'default' with: #('VLC' 'VLC-Tests' "'VLC-Inspector'")
 ]
 
 { #category : 'baselines' }
