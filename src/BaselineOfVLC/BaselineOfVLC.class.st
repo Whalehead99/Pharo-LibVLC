@@ -1,10 +1,11 @@
 Class {
-	#name : #BaselineOfVLC,
-	#superclass : #BaselineOf,
-	#category : #BaselineOfVLC
+	#name : 'BaselineOfVLC',
+	#superclass : 'BaselineOf',
+	#category : 'BaselineOfVLC',
+	#package : 'BaselineOfVLC'
 }
 
-{ #category : #baselines }
+{ #category : 'baselines' }
 BaselineOfVLC >> baseline: spec [
 	<baseline>
 	spec
@@ -20,21 +21,21 @@ BaselineOfVLC >> baseline: spec [
 				package: 'VLC' with: [ spec requires: #('GitBridge') ] ]
 ]
 
-{ #category : #baselines }
+{ #category : 'baselines' }
 BaselineOfVLC >> defineDependencies: spec [
 	spec baseline: 'GitBridge' with: [ spec repository: 'github://jecisc/GitBridge:v1.x.x/src' ]
 ]
 
-{ #category : #baselines }
+{ #category : 'baselines' }
 BaselineOfVLC >> defineGroups: spec [
 	spec
 		group: 'default' with: #('VLC' 'VLC-Tests' 'VLC-Inspector')
 ]
 
-{ #category : #baselines }
+{ #category : 'baselines' }
 BaselineOfVLC >> definePackages: spec [
 	spec
 		package: 'VLC' with: [ spec requires: #('GitBridge')];
-		package: 'VLC-Tests' with: [ spec requires: #('VLC') ];
-		package: 'VLC-Inspector'
+		package: 'VLC-Tests' with: [ spec requires: #('VLC') ]";
+		package: 'VLC-Inspector'"
 ]

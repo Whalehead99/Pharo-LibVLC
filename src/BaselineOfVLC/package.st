@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfVLC }
+Package { #name : 'BaselineOfVLC' }
