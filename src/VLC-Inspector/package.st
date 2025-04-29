@@ -1,1 +1,1 @@
-Package { #name : #'VLC-Inspector' }
+Package { #name : 'VLC-Inspector' }
